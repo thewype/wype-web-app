@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --redColor: #FF0000;
+    --blackColor: #000000;
+    --blackColor600: #19191B;
+    --grayColor: #737373;
+    --whiteColor: #FFFFFF;
+    --whiteGrayColor: #f5f5f5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+input {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.font-weight-300 {
+    font-variation-settings: "wght" 300;
+}
+
+.font-weight-400 {
+    font-variation-settings: "wght" 400;
+}
+
+.font-weight-500 {
+    font-variation-settings: "wght" 500;
+}
+
+.font-weight-600 {
+    font-variation-settings: "wght" 600;
+}
+
+.font-weight-700 {
+    font-variation-settings: "wght" 700;
+}
+
+.font-weight-800 {
+    font-variation-settings: "wght" 800;
+}

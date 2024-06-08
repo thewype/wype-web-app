@@ -1,0 +1,18 @@
+button{
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    width: max-content;
+    padding: 13px 40px;
+    font-size: 13px;
+    margin: auto;
+    cursor: pointer;
+    background-color: var(--redColor);
+    color: var(--whiteColor);
+    display: block;
+    margin: auto;
+
+    &:active{
+        opacity: 0.8;
+    }
+}
