@@ -21,9 +21,13 @@ import arcImage from '../../../public/images/arc-logo.png';
 import mafraImage from '../../../public/images/ma-fra-logo.png';
 import manaMachineImage from '../../../public/images/mana-machine-log.png';
 import carDryCleanImage from '../../../public/images/dry-clean-car.png';
+import userAvatar from '../../../public/images/user.png';
 import handCleanWhite from '../../../public/images/hand-clean-white.svg';
 import whiteFeather from '../../../public/images/feather-white.svg';
 import whiteSeat from '../../../public/images/seat-white.svg';
+import indisCommunityImage from '../../../public/images/inids-community.png';
+import nccUrbanCommunityImage from '../../../public/images/ncc-urban-community.png';
+import bmwLogo from '../../../public/images/bwm-log.png';
 import { useRef, useState } from 'react';
 import { CaretCircleLeft, CaretCircleRight, CaretRight, CaretLeft } from '@phosphor-icons/react/dist/ssr';
 import WypeButton from '@/components/button/button-component';
@@ -32,11 +36,11 @@ import Stripe from '@/components/stripe/stripe-component';
 
 const HomePage = () => {
 
-    const sliderRef = useRef<any>();
+    const heroSliderRef = useRef<any>();
     const imageContainerRef = useRef<any>();
     const [layerPosition, setLayerPosition] = useState<number>();
 
-    const options = {
+    const heroSwiperOptions = {
         dots: false,
         infinite: true,
         speed: 500,
@@ -45,9 +49,38 @@ const HomePage = () => {
         autoplay: true,
         arrows: false,
         pauseOnFocus: false,
-        pauseOnHover: false,
+        pauseOnHover: true,
         autoplaySpeed: 2000,
     };
+
+    const familySwiperOptions = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: false,
+        pauseOnFocus: false,
+        pauseOnHover: true,
+        autoplaySpeed: 1500,
+        centerMode: true
+    }
+
+    const testimonialSwiperOptions = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: false,
+        pauseOnFocus: false,
+        pauseOnHover: true,
+        autoplaySpeed: 1500,
+        adaptiveHeight: true,
+        centerMode: true
+    }
 
     const hanedlePointerMove = (e: any) => {
         const container = imageContainerRef.current;
@@ -59,9 +92,9 @@ const HomePage = () => {
     return (
         <>
             <section className="home-hero-section">
-                <CaretCircleLeft className='slider-arrow left-arrow' onClick={() => sliderRef?.current?.slickPrev()} />
-                <CaretCircleRight className='slider-arrow right-arrow' onClick={() => sliderRef?.current?.slickNext()} />
-                <Slider {...options} ref={sliderRef} className='hero-slider'>
+                <CaretCircleLeft className='slider-arrow left-arrow' onClick={() => heroSliderRef?.current?.slickPrev()} />
+                <CaretCircleRight className='slider-arrow right-arrow' onClick={() => heroSliderRef?.current?.slickNext()} />
+                <Slider {...heroSwiperOptions} ref={heroSliderRef} className='hero-slider'>
                     <div className="hero-slide">
                         <div className="hero-content-wrapper">
                             <div className="hero-slider-txt font-weight-400">WELCOME TO WYPE REVOLUTION</div>
@@ -266,13 +299,116 @@ const HomePage = () => {
                 </div>
             </section>
             <Stripe></Stripe>
+            <section className='collaborated-family-section'>
+                <div className="collaborated-section-wrapper container">
+                    <div className='section-content'>
+                        <div className="section-heading font-weight-700">Collaborated <span>Family</span></div>
+                        <div className="section-description">Welcome to Wype Washing Services, where cleanliness meets convenience! At Wype, we understand the hustle and bustle of modern life can often leave little time for essential chores like car washing. That's why we've made it our mission to revolutionize the way you keep your vehicle sparkling clean.</div>
+                    </div>
+
+                    <div className='family-slider-wrapper'>
+                        <Slider {...familySwiperOptions} className='family-slider'>
+                            <div className="community-item">
+                                <Image className='community-image' src={indisCommunityImage} alt='indis community'></Image>
+                            </div>
+
+                            <div className="community-item">
+                                <Image className='community-image' src={nccUrbanCommunityImage} alt='ncc urban community'></Image>
+                            </div>
+
+                            <div className="community-item">
+                                <Image className='community-image' src={indisCommunityImage} alt='indis community'></Image>
+                            </div>
+
+                            <div className="community-item">
+                                <Image className='community-image' src={nccUrbanCommunityImage} alt='ncc urban community'></Image>
+                            </div>
+
+                            <div className="community-item">
+                                <Image className='community-image' src={indisCommunityImage} alt='indis community'></Image>
+                            </div>
+
+                            <div className="community-item">
+                                <Image className='community-image' src={nccUrbanCommunityImage} alt='ncc urban community'></Image>
+                            </div>
+
+                            <div className="community-item">
+                                <Image className='community-image' src={indisCommunityImage} alt='indis community'></Image>
+                            </div>
+
+                            <div className="community-item">
+                                <Image className='community-image' src={nccUrbanCommunityImage} alt='ncc urban community'></Image>
+                            </div>
+
+                            <div className="community-item">
+                                <Image className='community-image' src={indisCommunityImage} alt='indis community'></Image>
+                            </div>
+
+                            <div className="community-item">
+                                <Image className='community-image' src={nccUrbanCommunityImage} alt='ncc urban community'></Image>
+                            </div>
+
+                        </Slider>
+                    </div>
+                </div>
+            </section>
+            <section className="testimonial-section">
+                <div className="testimonial-section-wrapper container">
+                    <div className="testimonial-content">
+                        <div className="section-title">OUR TESTIMONIALS</div>
+                        <div className="section-heading font-weight-700">What our <span>Customers</span> are saying</div>
+                    </div>
+                    <div className="testimonial-slider-wrapper">
+                        <Slider {...testimonialSwiperOptions} className='testimonial-slider'>
+
+                            <div className="testimonial-item">
+                                <Image className='car-logo' src={bmwLogo} alt='car-logo' />
+                                <div className="testimonial-review">At Wype, we understand the hustle and bustle of modern life can often leave little time for essential chores like car washing. </div>
+                                <div className="user-avatar-wrapper">
+                                    <Image className='user-logo' src={userAvatar} alt='user' width={80} height={80} />
+                                    <div className="user-name font-weight-600">Shivaraj Padala</div>
+                                </div>
+                            </div>
+
+                            <div className="testimonial-item">
+                                <Image className='car-logo' src={bmwLogo} alt='car-logo' />
+                                <div className="testimonial-review">At Wype, we understand the hustle and bustle of modern life can often leave little time for essential chores like car washing. </div>
+                                <div className="user-avatar-wrapper">
+                                    <Image className='user-logo' src={userAvatar} alt='user' width={80} height={80} />
+                                    <div className="user-name font-weight-600">Shivaraj Padala</div>
+                                </div>
+                            </div>
+
+
+                            <div className="testimonial-item">
+                                <Image className='car-logo' src={bmwLogo} alt='car-logo' />
+                                <div className="testimonial-review">At Wype, we understand the hustle and bustle of modern life can often leave little time for essential chores like car washing. </div>
+                                <div className="user-avatar-wrapper">
+                                    <Image className='user-logo' src={userAvatar} alt='user' width={80} height={80} />
+                                    <div className="user-name font-weight-600">Shivaraj Padala</div>
+                                </div>
+                            </div>
+
+                            <div className="testimonial-item">
+                                <Image className='car-logo' src={bmwLogo} alt='car-logo' />
+                                <div className="testimonial-review">At Wype, we understand the hustle and bustle of modern life can often leave little time for essential chores like car washing. </div>
+                                <div className="user-avatar-wrapper">
+                                    <Image className='user-logo' src={userAvatar} alt='user' width={80} height={80} />
+                                    <div className="user-name font-weight-600">Shivaraj Padala</div>
+                                </div>
+                            </div>
+
+                        </Slider>
+                    </div>
+                </div>
+            </section>
             <section className='our-partners-section'>
                 <div className="our-section-wrapper container">
                     <div className="our-section-content">
                         <div className="section-heading font-weight-700">Our <br /><span>Brand</span> Partners</div>
                         <div className="our-section-description">Welcome to Wype Washing Services, where cleanliness meets convenience!
                             At Wype, we understand the hustle and bustle of modern life can often leave little time for essential chores like car washing.
-                            That's why we've made it our mission to revolutionize the way you keep your vehicle sparkling clean.
+                            That&apos;s why we&apos;ve made it our mission to revolutionize the way you keep your vehicle sparkling clean.
                         </div>
                         <div>
                             <WypeButton buttonText='Read More' borderColor='var(--redColor)' backgroundColor='var(--whiteColor)' color='var(--redColor)' click={() => { }}></WypeButton>
