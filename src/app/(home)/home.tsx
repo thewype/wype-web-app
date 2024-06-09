@@ -298,7 +298,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </section>
-            <Stripe></Stripe>
+            <Stripe />
             <section className='collaborated-family-section'>
                 <div className="collaborated-section-wrapper container">
                     <div className='section-content'>
