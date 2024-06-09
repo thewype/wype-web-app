@@ -1,0 +1,45 @@
+.switch-wrapper {
+    position: relative;
+    width: 45px;
+    height: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+  
+    .switch-checkbox {
+      opacity: 0;
+      height: 0px;
+      width: 0px;
+  
+      &:checked+.switch-track {
+        background-color: #ECECEC;
+  
+        &::before {
+          transform: translateX(20px);
+        }
+      }
+    }
+  
+    .switch-track {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ECECEC;
+      transition: .3s;
+  
+      &::before {
+        top: 16%;
+        left: 4px;
+        position: absolute;
+        content: '';
+        width: 17px;
+        height: 17px;
+        border-radius: 10px;
+        background-color: var(--blackColor);
+        transition: .3s;
+      }
+    }
+  }
