@@ -6,6 +6,19 @@ import servicesHeroImg from '../../../public/images/services-hero.png';
 import whyChooseWypeImg from '../../../public/images/why-choose-wype.png';
 import WypeButton from '@/components/button/button-component';
 import redSeatIcon from '../../../public/images/red-seat.svg';
+import steamCarWash from '../../../public/images/steam-car-wash.png';
+import interiorDryCleaning from '../../../public/images/interior-cleaning-dry.png';
+import glassTreatment from '../../../public/images/glass-treatment.png';
+import alloyCoating from '../../../public/images/alloy-cleaning.png';
+import engineCoating from '../../../public/images/engine-coating.png';
+import hardWaterSpotRemoval from '../../../public/images/hard-water-spot-removal.png';
+import tarGlueRemoval from '../../../public/images/tar-glue-removal.png';
+import headLightRestoration from '../../../public/images/head-light-restoration.png';
+import waxing from '../../../public/images/waxing.png';
+import fabricCoating from '../../../public/images/fabric-coating.png';
+import leatherConditioning from '../../../public/images/leather-coating.png';
+import acVentCleaning from '../../../public/images/ac-vent-cleaning.png';
+import acSantization from '../../../public/images/ac-santization.png';
 import Stripe from '@/components/stripe/stripe-component';
 
 const ServicesPage = () => {
@@ -66,11 +79,68 @@ const ServicesPage = () => {
                 </div>
             </section>
             <section className='services-list-section'>
-                <div className="services-section-wrapper container">
-                    <h3 className="section-title">Wype <span>Services</span></h3>
-                </div>
+                <div className='service-section-wrapper container'>
 
-                <div className="services-list-wrapper"></div>
+                    <div className="services-section-content-wrapper">
+                        <h3 className="section-title">Wype <span>Services</span></h3>
+                    </div>
+
+                    <div className="services-list-flex">
+
+                        <div className="service-item-card">
+                            <Image src={steamCarWash} alt='wype steam car wash' fill={true}></Image>
+                        </div>
+
+                        <div className="service-item-card">
+                            <Image src={interiorDryCleaning} alt='wype interior dry cleaning' fill={true}></Image>
+                        </div>
+
+                        <div className="service-item-card">
+                            <Image src={glassTreatment} alt='wype glass treatment' fill={true}></Image>
+                        </div>
+
+                        <div className="service-item-card">
+                            <Image src={alloyCoating} alt='wype alloy coating' fill={true}></Image>
+                        </div>
+
+                        <div className="service-item-card">
+                            <Image src={engineCoating} alt='wype engine coating' fill={true}></Image>
+                        </div>
+
+                        <div className="service-item-card">
+                            <Image src={hardWaterSpotRemoval} alt='wype hardwater spot removal' fill={true}></Image>
+                        </div>
+
+                        <div className="service-item-card">
+                            <Image src={tarGlueRemoval} alt='wype tar glue removal' fill={true}></Image>
+                        </div>
+
+                        <div className="service-item-card">
+                            <Image src={headLightRestoration} alt='wype headlight restoration' fill={true}></Image>
+                        </div>
+
+                        <div className="service-item-card">
+                            <Image src={waxing} alt='wype waxing' fill={true}></Image>
+                        </div>
+
+                        <div className="service-item-card">
+                            <Image src={fabricCoating} alt='wype fabric coating' fill={true}></Image>
+                        </div>
+
+                        <div className="service-item-card">
+                            <Image src={leatherConditioning} alt='wype leather conditioning' fill={true}></Image>
+                        </div>
+
+                        <div className="service-item-card">
+                            <Image src={acVentCleaning} alt='wype ac vent foam cleaining' fill={true}></Image>
+                        </div>
+
+                        <div className="service-item-card">
+                            <Image src={acSantization} alt='wype ac santization' fill={true}></Image>
+                        </div>
+
+                    </div>
+                </div>
             </section>
             <Stripe />
         </>

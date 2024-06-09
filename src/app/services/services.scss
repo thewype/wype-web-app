@@ -77,14 +77,14 @@
             }
         }
 
-        .why-choose-feature-flex{
+        .why-choose-feature-flex {
             display: flex;
             justify-content: space-between;
             align-items: center;
             column-gap: 10px;
             margin-top: 70px;
 
-            .why-choose-feature-item{
+            .why-choose-feature-item {
                 max-width: 250px;
                 text-align: center;
                 display: flex;
@@ -93,7 +93,7 @@
                 justify-content: center;
                 row-gap: 10px;
 
-                .seat-icon-wrapper{
+                .seat-icon-wrapper {
                     margin: auto;
                     background-color: #FFCDCD;
                     height: 90px;
@@ -103,8 +103,8 @@
                     place-content: center;
                 }
 
-                .item-description{
-                   
+                .item-description {
+
                     font-size: 13px;
                     color: var(--grayColor);
                 }
@@ -113,20 +113,37 @@
     }
 }
 
-.services-list-section{
-    .services-section-wrapper{
+.services-list-section {
+    .service-section-wrapper {
         padding: 50px 10px;
-        .section-title{
-            text-align: center;
-            font-size: 28px;
-            color: var(--blackColor);
-            span{
-                color: var(--redColor);
+
+        .services-section-content-wrapper {
+
+            .section-title {
+                text-align: center;
+                font-size: 28px;
+                color: var(--blackColor);
+
+                span {
+                    color: var(--redColor);
+                }
             }
         }
 
-        .services-list-wrapper{
-            
+        .services-list-flex {
+            margin-top: 40px;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            column-gap: 5%;
+            row-gap: 50px;
+
+            .service-item-card {
+                aspect-ratio: auto 347 / 392;
+                width: 30%;
+                position: relative;
+            }
         }
+
     }
 }
