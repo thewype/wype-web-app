@@ -1,0 +1,94 @@
+.about-hero-section {
+    position: relative;
+    aspect-ratio: auto 1219 / 449;
+
+    .about-section-wrapper {
+        padding: 50px 10px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        display: grid;
+        place-content: center;
+
+        h1 {
+            text-align: center;
+            color: var(--whiteColor);
+            font-size: 28px;
+
+            span {
+                display: block;
+                color: var(--blackColor);
+            }
+        }
+    }
+}
+
+.about-wype-section {
+    .about-wype-section-wrapper {
+        padding: 50px 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+
+        h2 {
+            font-size: 28px;
+            color: var(--blackColor);
+
+            span {
+                color: var(--redColor);
+            }
+        }
+
+        .about-description {
+            color: var(--grayColor);
+        }
+    }
+}
+
+.founders-section {
+    background-color: var(--whiteGrayColor);
+
+    .founders-section-wrapper {
+        padding: 50px 10px;
+
+        h3 {
+            text-align: center;
+            font-size: 28px;
+            color: var(--blackColor);
+            margin-bottom: 50px;
+
+            span {
+                color: var(--redColor);
+            }
+        }
+
+        .founders-flex {
+            display: flex;
+            column-gap: 30px;
+            align-items: center;
+            justify-content: space-between;
+
+            .founder-flex-item{
+                width: 30%;
+                color: var(--grayColor);  
+                line-height: 28px;  
+                text-align: center;
+
+                .founder-name{
+                    margin-top: 20px;
+                    font-size: 20px;
+                    color: var(--blackColor);
+                }
+            }
+
+            .founder-flex-image {
+                width: 100%;
+                position: relative;
+                aspect-ratio: 152/179; 
+            }
+        }
+    }
+}
