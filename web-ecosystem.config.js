@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'web',
+      name: 'wype-web-app',
       exec_mode: 'cluster',
       instances: 0,
       script: 'node_modules/next/dist/bin/next',
