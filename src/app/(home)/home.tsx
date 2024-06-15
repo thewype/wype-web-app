@@ -121,11 +121,11 @@ const HomePage = () => {
                         <Image className='hero-img' priority={true} src={hero1} fill={true} alt={'wype hero img'}></Image>
                     </div>
                     <div className="hero-slide">
-                        <Image src={hero2} priority={true} fill={true} alt={'wype hero img2'}></Image>
+                        <Image src={hero2} fill={true} alt={'wype hero img2'}></Image>
                     </div>
                 </Carousel>
                 <div className="mobile-hero-section-wrapper">
-                    <Image className='mobile-hero-img' priority={true} src={mobileHero1} alt='the wype hero' />
+                    <Image className='mobile-hero-img' loading='eager' src={mobileHero1} alt='the wype hero' />
                     <div className="mobile-hero-content">
                         <div className="hero-mobile-text font-weight-400">WELCOME TO WYPE REVOLUTION</div>
                         <h1 className='font-weight-800'>give your vehicle the <br /> <span>royal treatment</span> <br /> it deserves with wype!</h1>
@@ -437,11 +437,24 @@ const HomePage = () => {
                             At Wype, we understand the hustle and bustle of modern life can often leave little time for essential chores like car washing.
                             That&apos;s why we&apos;ve made it our mission to revolutionize the way you keep your vehicle sparkling clean.
                         </div>
-                        <div>
+                        <div className='our-partner-btn-wrapper'>
                             <WypeButton buttonText='Read More' borderColor='var(--redColor)' backgroundColor='var(--whiteColor)' color='var(--redColor)' fontWeight='600' fontSize='14px' click={() => { }}></WypeButton>
                         </div>
                     </div>
-                    <div className="our-partners-images-flex"></div>
+                    <div className="our-partners-images-flex">
+                        <div className='partners-image-wrapper'>
+                            <Image src={detailingMafiaIMage} alt='detailing mafia' fill={true} />
+                        </div>
+                        <div className='partners-image-wrapper'>
+                            <Image src={mafraImage} alt='MA FRA' fill={true} />
+                        </div>
+                        <div className='partners-image-wrapper'>
+                            <Image src={manaMachineImage} alt='mana machine' fill={true} />
+                        </div>
+                        <div className='partners-image-wrapper'>
+                            <Image src={arcImage} alt='arc' fill={true} />
+                        </div>
+                    </div>
                 </div>
             </section>
         </>

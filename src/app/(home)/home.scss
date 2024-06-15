@@ -513,13 +513,14 @@
 .our-partners-section {
     .our-section-wrapper {
         display: flex;
-        padding: 30px 10px;
+        padding: 50px 10px;
 
         .our-section-content {
             width: 50%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            row-gap: 50px;
 
             .section-heading {
                 font-size: 28px;
@@ -538,6 +539,18 @@
 
         .our-partners-images-flex {
             width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            row-gap: 50px;
+            column-gap: 50px;
+
+            .partners-image-wrapper {
+                position: relative;
+                width: 200px;
+                height: 100px;
+            }
         }
     }
 
@@ -803,6 +816,7 @@
                     font-size: 20px;
                 }
             }
+
             .testimonial-carousel-wrapper {
                 margin: 20px 0px;
             }
