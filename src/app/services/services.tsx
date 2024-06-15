@@ -32,7 +32,7 @@ const ServicesPage = () => {
                         <WypeButton buttonText={'BOOK NOW'} click={() => { }} />
                     </div>
                 </div>
-                <Image src={servicesHeroImg} alt='wype services hero' fill={true} />
+                <Image src={servicesHeroImg} loading='eager' alt='wype services hero' fill={true} />
             </section>
             <section className="why-choose-section">
                 <div className="why-choose-section-wrapper container">

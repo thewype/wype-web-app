@@ -11,7 +11,7 @@ const AboutPage = () => {
     return (
         <>
             <section className='about-hero-section'>
-                <Image src={aboutHeroImage} alt='wype about' fill={true}></Image>
+                <Image src={aboutHeroImage} loading='eager' alt='wype about' fill={true}></Image>
                 <div className="about-section-wrapper container">
                     <h1>Experience the Ultimate in Car Care with Wype:
                         <span>Your Premier Car Detailing Service</span>

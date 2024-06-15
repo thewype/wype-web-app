@@ -118,10 +118,10 @@ const HomePage = () => {
                             <h1 className='font-weight-800'>give your vehicle the <span>royal</span> <br /> <span>treatment</span> it deserves with wype!</h1>
                             <WypeButton buttonText='BOOK NOW' fontWeight='600' click={() => { }}></WypeButton>
                         </div>
-                        <Image className='hero-img' src={hero1} fill={true} alt={'wype hero img'}></Image>
+                        <Image className='hero-img' loading='eager' src={hero1} fill={true} alt={'wype hero img'}></Image>
                     </div>
                     <div className="hero-slide">
-                        <Image src={hero2} fill={true} alt={'wype hero img2'}></Image>
+                        <Image src={hero2} loading='eager' fill={true} alt={'wype hero img2'}></Image>
                     </div>
                 </Carousel>
                 <div className="mobile-hero-section-wrapper">
