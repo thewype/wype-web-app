@@ -20,6 +20,8 @@ import detailingMafiaIMage from '../../../public/images/detailing-mafia-logo.png
 import arcImage from '../../../public/images/arc-logo.png';
 import mafraImage from '../../../public/images/ma-fra-logo.png';
 import manaMachineImage from '../../../public/images/mana-machine-log.png';
+import mobileHero1 from '../../../public/images/mobile-hero.png';
+import ourProcessMobileHero from '../../../public/images/our-process-hero.png';
 import carDryCleanImage from '../../../public/images/dry-clean-car.png';
 import userAvatar from '../../../public/images/user.png';
 import handCleanWhite from '../../../public/images/hand-clean-white.svg';
@@ -96,7 +98,7 @@ const HomePage = () => {
                 <CaretCircleRight className='slider-arrow right-arrow' onClick={() => heroSliderRef?.current?.slickNext()} />
                 <Slider {...heroSwiperOptions} ref={heroSliderRef} className='hero-slider'>
                     <div className="hero-slide">
-                        <div className="hero-content-wrapper">
+                        <div className="hero-content-wrapper container">
                             <div className="hero-slider-txt font-weight-400">WELCOME TO WYPE REVOLUTION</div>
                             <h1 className='font-weight-800'>give your vehicle the <span>royal</span> <br /> <span>treatment</span> it deserves with wype!</h1>
                             <WypeButton buttonText='BOOK NOW' click={() => { }}></WypeButton>
@@ -107,6 +109,16 @@ const HomePage = () => {
                         <Image src={hero2} fill={true} alt={'wype hero img2'}></Image>
                     </div>
                 </Slider>
+                <div className="mobile-hero-section-wrapper">
+                    <Image className='mobile-hero-img' src={mobileHero1} alt='the wype hero' />
+                    <div className="mobile-hero-content">
+                        <div className="hero-mobile-text font-weight-400">WELCOME TO WYPE REVOLUTION</div>
+                        <h1 className='font-weight-800'>give your vehicle the <br /> <span>royal treatment</span> <br /> it deserves with wype!</h1>
+                        <div className="hero-btn-wrapper">
+                            <WypeButton buttonText='BOOK NOW' click={() => { }}></WypeButton>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section className='home-wype-section'>
                 <div className="who-is-wype-container container">
@@ -185,13 +197,15 @@ const HomePage = () => {
                     </div>
                 </div>
                 <Image className='our-process-bg' src={wypeOurProcess} fill={true} alt={'wype process'}></Image>
+                <Image className='our-process-bg-mobile' src={ourProcessMobileHero} alt={'wype process'}></Image>
+
             </section>
             <section className="dryclean-section">
                 <div className="dryclean-section-wrapper container">
                     <div className="dryclean-cta-wrapper">
                         <div className="dryclean-cta-content">
                             <div className="cta-title font-weight-700">Dry <span>Cleaning</span> any <br />dirt inside the car</div>
-                            <div>
+                            <div className='dryclean-cta'>
                                 <WypeButton buttonText='BOOK NOW' click={() => { }}></WypeButton>
                             </div>
 
@@ -211,14 +225,17 @@ const HomePage = () => {
                                 </div>
                                 <Image src={carDryCleanImage} alt='car cleaning' fill={true}></Image>
                             </div>
+                            <div className="arrows-flex-mobile">
+                                <CaretCircleLeft />
+                                <CaretCircleRight />
+                            </div>
                         </div>
-
                     </div>
 
                     <div className="dryclean-features-wrapper">
 
                         <div className="dryclean-item">
-                            <Image src={handCleanWhite} alt='clean' width={70} height={70}></Image>
+                            <Image src={handCleanWhite} alt='clean'></Image>
                             <div>
                                 <div className="dryclean-item-heading">Natural Cleaners</div>
                                 <div className="dryclean-item-description font-weight-600">Welcome to Wype Washing Services, where cleanliness meets convenience!</div>
@@ -226,7 +243,7 @@ const HomePage = () => {
                         </div>
 
                         <div className="dryclean-item">
-                            <Image src={whiteSeat} alt='car seat' width={70} height={70}></Image>
+                            <Image src={whiteSeat} alt='car seat'></Image>
                             <div>
                                 <div className="dryclean-item-heading">Natural Cleaners</div>
                                 <div className="dryclean-item-description font-weight-600">Welcome to Wype Washing Services, where cleanliness meets convenience!</div>
@@ -234,7 +251,7 @@ const HomePage = () => {
                         </div>
 
                         <div className="dryclean-item">
-                            <Image src={whiteFeather} alt='feather' width={70} height={70}></Image>
+                            <Image src={whiteFeather} alt='feather'></Image>
                             <div>
                                 <div className="dryclean-item-heading">Natural Cleaners</div>
                                 <div className="dryclean-item-description font-weight-600">Welcome to Wype Washing Services, where cleanliness meets convenience!</div>
