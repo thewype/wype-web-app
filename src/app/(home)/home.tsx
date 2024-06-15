@@ -97,7 +97,7 @@ const HomePage = () => {
         infinite: true,
         autoPlay: true,
         autoPlaySpeed: 1500,
-        arrows: false,
+        arrows: true,
         transitionDuration: 500,
     };
 
@@ -116,7 +116,7 @@ const HomePage = () => {
                         <div className="hero-content-wrapper container">
                             <div className="hero-slider-txt font-weight-400">WELCOME TO WYPE REVOLUTION</div>
                             <h1 className='font-weight-800'>give your vehicle the <span>royal</span> <br /> <span>treatment</span> it deserves with wype!</h1>
-                            <WypeButton buttonText='BOOK NOW' click={() => { }}></WypeButton>
+                            <WypeButton buttonText='BOOK NOW' fontWeight='600' click={() => { }}></WypeButton>
                         </div>
                         <Image className='hero-img' src={hero1} fill={true} alt={'wype hero img'}></Image>
                     </div>
@@ -130,7 +130,7 @@ const HomePage = () => {
                         <div className="hero-mobile-text font-weight-400">WELCOME TO WYPE REVOLUTION</div>
                         <h1 className='font-weight-800'>give your vehicle the <br /> <span>royal treatment</span> <br /> it deserves with wype!</h1>
                         <div className="hero-btn-wrapper">
-                            <WypeButton buttonText='BOOK NOW' click={() => { }}></WypeButton>
+                            <WypeButton buttonText='BOOK NOW' fontWeight='600' click={() => { }}></WypeButton>
                         </div>
                     </div>
                 </div>
@@ -221,7 +221,7 @@ const HomePage = () => {
                         <div className="dryclean-cta-content">
                             <div className="cta-title font-weight-700">Dry <span>Cleaning</span> any <br />dirt inside the car</div>
                             <div className='dryclean-cta'>
-                                <WypeButton buttonText='BOOK NOW' click={() => { }}></WypeButton>
+                                <WypeButton buttonText='BOOK NOW' fontWeight='600' click={() => { }}></WypeButton>
                             </div>
 
                             <div className="arrows-flex">
@@ -300,7 +300,7 @@ const HomePage = () => {
                             <Image src={glassTreatmentImg} alt='car glass treatment' fill={true}></Image>
                         </div>
                     </div>
-                    <WypeButton buttonText='Browse More' click={() => { }} backgroundColor='transparent' color='var(--redColor)' borderColor='var(--redColor)' fontSize='15px'></WypeButton>
+                    <WypeButton buttonText='Browse More' fontWeight='600' click={() => { }} backgroundColor='transparent' color='var(--redColor)' borderColor='var(--redColor)' fontSize='14px'></WypeButton>
                 </div>
             </section>
             <section className='preserving-section'>
@@ -438,7 +438,7 @@ const HomePage = () => {
                             That&apos;s why we&apos;ve made it our mission to revolutionize the way you keep your vehicle sparkling clean.
                         </div>
                         <div>
-                            <WypeButton buttonText='Read More' borderColor='var(--redColor)' backgroundColor='var(--whiteColor)' color='var(--redColor)' click={() => { }}></WypeButton>
+                            <WypeButton buttonText='Read More' borderColor='var(--redColor)' backgroundColor='var(--whiteColor)' color='var(--redColor)' fontWeight='600' fontSize='14px' click={() => { }}></WypeButton>
                         </div>
                     </div>
                     <div className="our-partners-images-flex"></div>
