@@ -1,7 +1,6 @@
 'use client'
 
 import './home.scss';
-import Slider from "react-slick";
 import Image from 'next/image';
 import hero1 from '../../../public/images/hero-1.png';
 import hero2 from '../../../public/images/hero-2.png';
@@ -34,55 +33,73 @@ import { useRef, useState } from 'react';
 import { CaretCircleLeft, CaretCircleRight, CaretRight, CaretLeft } from '@phosphor-icons/react/dist/ssr';
 import WypeButton from '@/components/button/button-component';
 import Stripe from '@/components/stripe/stripe-component';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 
 
 const HomePage = () => {
-
-    const heroSliderRef = useRef<any>();
     const imageContainerRef = useRef<any>();
     const [layerPosition, setLayerPosition] = useState<number>();
 
-    const heroSwiperOptions = {
-        dots: false,
+    const heroCarouselOptions = {
+        responsive: {
+            desktopLarge: {
+                breakpoint: { max: 3000, min: 701 },
+                items: 1
+            }
+        },
+        ssr: true,
         infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        arrows: false,
-        pauseOnFocus: false,
-        pauseOnHover: true,
-        autoplaySpeed: 2000,
+        autoPlay: true,
+        autoPlaySpeed: 2000,
+        arrows: true,
+        transitionDuration: 500,
     };
 
-    const familySwiperOptions = {
-        dots: false,
+    const familyCarouselOptions = {
+        responsive: {
+            desktopLarge: {
+                breakpoint: { max: 3000, min: 701 },
+                items: 5
+            },
+            mobile: {
+                breakpoint: { max: 700, min: 0 },
+                items: 2
+            }
+        },
+        ssr: true,
         infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
+        autoPlay: true,
+        autoPlaySpeed: 1500,
         arrows: false,
-        pauseOnFocus: false,
-        pauseOnHover: true,
-        autoplaySpeed: 1500,
-        centerMode: true
-    }
+        transitionDuration: 500,
+        centerMode: true,
+    };
 
-    const testimonialSwiperOptions = {
-        dots: false,
+
+    const testimonialCarouselOptions = {
+        responsive: {
+            desktopLarge: {
+                breakpoint: { max: 3000, min: 1000 },
+                items: 3
+            },
+            desktopMedium: {
+                breakpoint: { max: 1000, min: 701 },
+                items: 2
+            },
+            mobile: {
+                breakpoint: { max: 700, min: 0 },
+                items: 1
+            }
+        },
+        ssr: true,
         infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
+        autoPlay: true,
+        autoPlaySpeed: 1500,
         arrows: false,
-        pauseOnFocus: false,
-        pauseOnHover: true,
-        autoplaySpeed: 1500,
-        adaptiveHeight: true,
-        centerMode: true
-    }
+        transitionDuration: 500,
+    };
 
     const hanedlePointerMove = (e: any) => {
         const container = imageContainerRef.current;
@@ -94,9 +111,7 @@ const HomePage = () => {
     return (
         <>
             <section className="home-hero-section">
-                <CaretCircleLeft className='slider-arrow left-arrow' onClick={() => heroSliderRef?.current?.slickPrev()} />
-                <CaretCircleRight className='slider-arrow right-arrow' onClick={() => heroSliderRef?.current?.slickNext()} />
-                <Slider {...heroSwiperOptions} ref={heroSliderRef} className='hero-slider'>
+                <Carousel {...heroCarouselOptions} className='hero-carousel '>
                     <div className="hero-slide">
                         <div className="hero-content-wrapper container">
                             <div className="hero-slider-txt font-weight-400">WELCOME TO WYPE REVOLUTION</div>
@@ -108,7 +123,7 @@ const HomePage = () => {
                     <div className="hero-slide">
                         <Image src={hero2} fill={true} alt={'wype hero img2'}></Image>
                     </div>
-                </Slider>
+                </Carousel>
                 <div className="mobile-hero-section-wrapper">
                     <Image className='mobile-hero-img' src={mobileHero1} alt='the wype hero' />
                     <div className="mobile-hero-content">
@@ -261,6 +276,9 @@ const HomePage = () => {
                     </div>
                 </div>
             </section>
+            <div className="mobile-stripe">
+                <Stripe buttonRadius='30px' />
+            </div>
             <section className='services-section'>
                 <div className="services-section-wrapper container">
                     <h3 className='section-heading'>WYPE <span>SERVIES</span></h3>
@@ -315,7 +333,9 @@ const HomePage = () => {
                     </div>
                 </div>
             </section>
-            <Stripe />
+            <div className="desktop-stripe">
+                <Stripe />
+            </div>
             <section className='collaborated-family-section'>
                 <div className="collaborated-section-wrapper container">
                     <div className='section-content'>
@@ -323,15 +343,8 @@ const HomePage = () => {
                         <div className="section-description">Welcome to Wype Washing Services, where cleanliness meets convenience! At Wype, we understand the hustle and bustle of modern life can often leave little time for essential chores like car washing. That's why we've made it our mission to revolutionize the way you keep your vehicle sparkling clean.</div>
                     </div>
 
-                    <div className='family-slider-wrapper'>
-                        <Slider {...familySwiperOptions} className='family-slider'>
-                            <div className="community-item">
-                                <Image className='community-image' src={indisCommunityImage} alt='indis community'></Image>
-                            </div>
-
-                            <div className="community-item">
-                                <Image className='community-image' src={nccUrbanCommunityImage} alt='ncc urban community'></Image>
-                            </div>
+                    <div className='family-carousel-wrapper'>
+                        <Carousel {...familyCarouselOptions}>
 
                             <div className="community-item">
                                 <Image className='community-image' src={indisCommunityImage} alt='indis community'></Image>
@@ -365,7 +378,7 @@ const HomePage = () => {
                                 <Image className='community-image' src={nccUrbanCommunityImage} alt='ncc urban community'></Image>
                             </div>
 
-                        </Slider>
+                        </Carousel>
                     </div>
                 </div>
             </section>
@@ -375,9 +388,8 @@ const HomePage = () => {
                         <div className="section-title">OUR TESTIMONIALS</div>
                         <div className="section-heading font-weight-700">What our <span>Customers</span> are saying</div>
                     </div>
-                    <div className="testimonial-slider-wrapper">
-                        <Slider {...testimonialSwiperOptions} className='testimonial-slider'>
-
+                    <div className="testimonial-carousel-wrapper">
+                        <Carousel {...testimonialCarouselOptions}>
                             <div className="testimonial-item">
                                 <Image className='car-logo' src={bmwLogo} alt='car-logo' />
                                 <div className="testimonial-review">At Wype, we understand the hustle and bustle of modern life can often leave little time for essential chores like car washing. </div>
@@ -396,7 +408,6 @@ const HomePage = () => {
                                 </div>
                             </div>
 
-
                             <div className="testimonial-item">
                                 <Image className='car-logo' src={bmwLogo} alt='car-logo' />
                                 <div className="testimonial-review">At Wype, we understand the hustle and bustle of modern life can often leave little time for essential chores like car washing. </div>
@@ -414,8 +425,7 @@ const HomePage = () => {
                                     <div className="user-name font-weight-600">Shivaraj Padala</div>
                                 </div>
                             </div>
-
-                        </Slider>
+                        </Carousel>
                     </div>
                 </div>
             </section>

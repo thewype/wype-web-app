@@ -3,30 +3,11 @@
     overflow: hidden;
     position: relative;
 
-    .slider-arrow {
-        position: absolute;
-        z-index: 1;
-        font-size: 70px;
-        filter: invert(1);
-        mix-blend-mode: difference;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-    }
-
-    .left-arrow {
-        left: 3%;
-    }
-
-    .right-arrow {
-        right: 3%;
-    }
-
     .mobile-hero-section-wrapper {
         display: none;
     }
 
-    .hero-slider {
+    .hero-carousel {
 
         .hero-slide {
             aspect-ratio: auto 857 / 562;
@@ -98,7 +79,6 @@
             display: flex;
             align-items: center;
             column-gap: 3%;
-
 
             .home-wype-content {
                 width: 50%;
@@ -315,7 +295,7 @@
                 align-items: center;
                 column-gap: 30px;
 
-                img{
+                img {
                     width: 70px;
                 }
 
@@ -450,15 +430,13 @@
             }
         }
 
-        .family-slider-wrapper {
+        .family-carousel-wrapper {
             width: 100%;
             margin: 70px 0px;
 
-            .family-slider {
-                .community-item {
-                    .community-image {
-                        margin: auto;
-                    }
+            .community-item {
+                .community-image {
+                    margin: auto;
                 }
             }
         }
@@ -490,45 +468,43 @@
             }
         }
 
-        .testimonial-slider-wrapper {
+        .testimonial-carousel-wrapper {
             width: 100%;
             margin: 70px 0px;
 
-            .testimonial-slider {
+            .testimonial-item {
+                margin: 0px 30px;
+                border-radius: 7px;
+                padding: 40px 20px;
+                background-color: var(--whiteColor);
 
-                .slick-slide {
-                    margin: 0 27px;
+                .car-logo {
+                    display: block;
+                    margin: auto;
                 }
 
-                .testimonial-item {
-                    border-radius: 7px;
-                    padding: 40px 20px;
-                    background-color: var(--whiteColor);
+                .testimonial-review {
+                    text-align: center;
+                    height: 100px;
+                    overflow: hidden;
+                    margin: 20px 0px;
+                    font-size: 14px;
+                    color: var(--grayColor);
+                }
 
-                    .car-logo {
+                .user-avatar-wrapper {
+
+                    .user-logo {
+                        display: block;
                         margin: auto;
                     }
 
-                    .testimonial-review {
+                    .user-name {
+                        margin-top: 20px;
                         text-align: center;
-                        height: 100px;
-                        overflow: hidden;
-                        margin: 20px 0px;
-                        font-size: 14px;
-                        color: var(--grayColor);
-                    }
-
-                    .user-avatar-wrapper {
-                        .user-logo {
-                            margin: auto;
-                        }
-
-                        .user-name {
-                            margin-top: 20px;
-                            text-align: center;
-                        }
                     }
                 }
+
             }
         }
     }
@@ -567,13 +543,14 @@
 
 }
 
+.mobile-stripe {
+    display: none;
+}
+
 @media only screen and (max-width: 700px) {
     .home-hero-section {
-        .slider-arrow {
-            display: none;
-        }
 
-        .hero-slider {
+        .hero-carousel {
             display: none;
         }
 
@@ -722,20 +699,21 @@
                 flex-direction: column;
                 margin-bottom: 0px;
 
-                .dryclean-cta-content{
+                .dryclean-cta-content {
                     width: 100%;
-                    .cta-title{
+
+                    .cta-title {
                         font-size: 20px;
                         width: 100%;
                         text-align: center;
                         margin-bottom: 30px;
                     }
 
-                    .arrows-flex{
+                    .arrows-flex {
                         display: none;
                     }
 
-                    .dryclean-cta{
+                    .dryclean-cta {
                         display: none;
                     }
                 }
@@ -745,7 +723,7 @@
                         display: none;
                     }
 
-                    .arrows-flex-mobile{
+                    .arrows-flex-mobile {
                         display: flex;
                         justify-content: center;
                         margin: 30px 0px;
@@ -761,13 +739,17 @@
                 row-gap: 30px;
                 padding: 10px 20px;
 
-                .dryclean-item{
-                    img{
+                .dryclean-item {
+                    img {
                         width: 50px;
                     }
                 }
             }
         }
+    }
+
+    .mobile-stripe {
+        display: block;
     }
 
     .services-section {
@@ -779,14 +761,59 @@
     }
 
     .collaborated-family-section {
-        display: none;
+        .collaborated-section-wrapper {
+            padding: 50px 20px 0px 20px;
+
+            .section-content {
+                .section-heading {
+                    font-size: 20px;
+                }
+
+                .section-description {
+                    text-align: left;
+                    font-size: 13px;
+                    color: var(--blackColor);
+                }
+            }
+
+            .family-carousel-wrapper {
+
+                .community-item {
+
+                    .community-image {
+                        width: 80px;
+                        height: 80px;
+                    }
+
+                }
+            }
+        }
     }
 
     .testimonial-section {
-        display: none;
+        .testimonial-section-wrapper {
+            padding: 30px 20px;
+
+            .testimonial-content {
+                .section-title {
+                    font-size: 13px;
+                }
+
+                .section-heading {
+                    font-size: 20px;
+                }
+            }
+            .testimonial-carousel-wrapper {
+                margin: 20px 0px;
+            }
+        }
     }
 
     .our-partners-section {
+        display: none;
+    }
+
+    .desktop-stripe {
         display: none;
     }
 }
