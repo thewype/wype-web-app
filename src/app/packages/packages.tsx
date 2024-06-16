@@ -4,10 +4,11 @@ import Stripe from '@/components/stripe/stripe-component';
 import steamWashSectionImage from '../../../public/images/steam-wash-section.png';
 import Image from 'next/image';
 import { CheckCircle } from '@phosphor-icons/react/dist/ssr';
-import './packages.scss'
+import whyChooseWypeImg from '../../../public/images/why-choose-wype.png';
 import WypeButton from '@/components/button/button-component';
 import ToggleSwitch from '@/components/switch/switch';
 import { useState } from 'react';
+import './packages.scss';
 
 const PackagePage = () => {
 
@@ -52,7 +53,7 @@ const PackagePage = () => {
                             </div>
 
                             <div className='package-btn-wrapper'>
-                                <WypeButton buttonText='Get this plan' backgroundColor='transparent' borderColor='var(--blackColor)' color='var(--blackColor)' fontWeight='600' fontSize='15px' click={() =>{}} />
+                                <WypeButton buttonText='Get this plan' backgroundColor='transparent' borderColor='var(--blackColor)' color='var(--blackColor)' fontWeight='600' fontSize='15px' borderRadius='30px' click={() =>{}} />
                             </div>
 
                         </div>
@@ -86,7 +87,7 @@ const PackagePage = () => {
                             </div>
 
                             <div className='package-btn-wrapper'>
-                                <WypeButton buttonText='Get this plan' backgroundColor='transparent' borderColor='var(--blackColor)' color='var(--blackColor)' fontWeight='600' fontSize='15px' click={() =>{}} />
+                                <WypeButton buttonText='Get this plan' backgroundColor='transparent' borderColor='var(--blackColor)' color='var(--blackColor)' fontWeight='600' fontSize='15px' borderRadius='30px' click={() =>{}} />
                             </div>
 
                         </div>
@@ -119,7 +120,7 @@ const PackagePage = () => {
                             </div>
 
                             <div className='package-btn-wrapper'>
-                                <WypeButton buttonText='Get this plan' backgroundColor='transparent' borderColor='var(--blackColor)' color='var(--blackColor)' fontWeight='600' fontSize='15px' click={() =>{}} />
+                                <WypeButton buttonText='Get this plan' backgroundColor='transparent' borderColor='var(--blackColor)' color='var(--blackColor)' fontWeight='600' fontSize='15px' borderRadius='30px' click={() =>{}} />
                             </div>
 
                         </div>
@@ -134,6 +135,10 @@ const PackagePage = () => {
                     </div>
                     <div className="section-content">
                         <div className="section-title font-weight-700"><span>Onetime Steam</span> Wash</div>
+
+                        <div className="section-mobile-image-wrapper">
+                            <Image className='steamwash-img' src={whyChooseWypeImg} alt='wype steam wash' fill={true} />
+                        </div>
 
                         <div className="section-item-list">
                             <div className="cost font-weight-800">₹ 900/-</div>
@@ -159,7 +164,7 @@ const PackagePage = () => {
                             </div>
                         </div>
                         <div className="section-btn-wrapper">
-                            <WypeButton buttonText='Get this plan' backgroundColor='var(--whiteColor)' color='var(--blackColor)' borderColor='var(--blackColor)' fontWeight='600' fontSize='15px' click={() => { }} />
+                            <WypeButton buttonText='Get this plan' backgroundColor='var(--whiteColor)' color='var(--blackColor)' borderColor='var(--blackColor)' fontWeight='600' fontSize='15px' borderRadius='30px' click={() => { }} />
                         </div>
                     </div>
                 </div>
