@@ -19,6 +19,7 @@ import fabricCoating from '../../../public/images/fabric-coating.png';
 import leatherConditioning from '../../../public/images/leather-coating.png';
 import acVentCleaning from '../../../public/images/ac-vent-cleaning.png';
 import acSantization from '../../../public/images/ac-santization.png';
+import servicesHeroMobile from '../../../public/images/service-hero-mobile.png';
 import Stripe from '@/components/stripe/stripe-component';
 
 const ServicesPage = () => {
@@ -26,13 +27,15 @@ const ServicesPage = () => {
         <>
             <section className='services-hero-section'>
                 <div className="services-section-content container">
-                    <h1><span>Trusted</span> & <span>Reliable</span><br />car washing</h1>
+                    <div className="mobile-title">essential chores of car washing</div>
+                    <h1><span>Trusted & Reliable</span><br />car washing</h1>
                     <div className="section-description font-weight-600">we understand the hustle and bustle of modern life can often leave little time for essential chores like car washing. </div>
                     <div className='services-hero-btn-wrapper'>
                         <WypeButton buttonText={'BOOK NOW'} click={() => { }} />
                     </div>
                 </div>
-                <Image src={servicesHeroImg} priority={true} alt='wype services hero' fill={true} />
+                <Image className='services-hero-desktop' src={servicesHeroImg} priority={true} alt='wype services hero' fill={true} />
+                <Image className='servies-hero-mobile' src={servicesHeroMobile} loading='eager' alt='wype services hero' fill={true} />
             </section>
             <section className="why-choose-section">
                 <div className="why-choose-section-wrapper container">

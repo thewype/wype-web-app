@@ -23,12 +23,12 @@ const Navbar = () => {
                 </Link>
                 <div className='nav-links-list' style={{ 'left': isNavOpen ? '0px' : '-100%' }}>
                     <X className='menu-close' weight='bold' onClick={() => setNavState(!isNavOpen)} />
-                    <Link className={`nav-link ${pathname === '/' ? 'nav-link-active' : ''}`} href={'/'}>HOME</Link>
-                    <Link className={`nav-link ${pathname === '/services' ? 'nav-link-active' : ''}`} href={'/services'}>SERVICES</Link>
-                    <Link className={`nav-link ${pathname === '/packages' ? 'nav-link-active' : ''}`} href={'/packages'}>PACKAGES</Link>
-                    <Link className={`nav-link ${pathname === '/about' ? 'nav-link-active' : ''}`} href={'/about'}>ABOUT US</Link>
-                    <Link className={`nav-link ${pathname === '/gallery' ? 'nav-link-active' : ''}`} href={'/gallery'}>GALLERY</Link>
-                    <Link className={`nav-link ${pathname === '/contact' ? 'nav-link-active' : ''}`} href={'/contact'}>CONTACT</Link>
+                    <Link onClick={() => setNavState(!isNavOpen)} className={`nav-link ${pathname === '/' ? 'nav-link-active' : ''}`} href={'/'}>HOME</Link>
+                    <Link onClick={() => setNavState(!isNavOpen)} className={`nav-link ${pathname === '/services' ? 'nav-link-active' : ''}`} href={'/services'}>SERVICES</Link>
+                    <Link onClick={() => setNavState(!isNavOpen)} className={`nav-link ${pathname === '/packages' ? 'nav-link-active' : ''}`} href={'/packages'}>PACKAGES</Link>
+                    <Link onClick={() => setNavState(!isNavOpen)} className={`nav-link ${pathname === '/about' ? 'nav-link-active' : ''}`} href={'/about'}>ABOUT US</Link>
+                    <Link onClick={() => setNavState(!isNavOpen)} className={`nav-link ${pathname === '/gallery' ? 'nav-link-active' : ''}`} href={'/gallery'}>GALLERY</Link>
+                    <Link onClick={() => setNavState(!isNavOpen)} className={`nav-link ${pathname === '/contact' ? 'nav-link-active' : ''}`} href={'/contact'}>CONTACT</Link>
                     <div className="login-btn-wrapper">
                         <WypeButton buttonText='LOGIN' fontSize='16px' fontWeight='600' click={() => { }} />
                     </div>

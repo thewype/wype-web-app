@@ -3,6 +3,10 @@
     position: relative;
     aspect-ratio: 1268/807;
 
+    .servies-hero-mobile{
+        display: none;
+    }
+
     .services-section-content {
         padding: 10px;
         position: absolute;
@@ -15,6 +19,10 @@
         flex-direction: column;
         justify-content: center;
         row-gap: 50px;
+
+        .mobile-title{
+            display: none;
+        }
 
         h1 {
             font-size: 40px;
@@ -145,5 +153,115 @@
             }
         }
 
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .services-hero-section{
+        min-height: 600px;
+        height: 100vh;
+        position: relative;
+
+        .services-section-content{
+            text-align: center;
+            row-gap: 20px;
+
+            .mobile-title{
+                color: var(--whiteColor);
+                text-transform: uppercase;
+                font-size: 13px;
+                display: block;
+            }
+
+            h1{
+                color: var(--whiteColor);
+                font-size: 24px;
+            }
+
+            .section-description{
+                display: none;
+            }
+
+            .services-hero-btn-wrapper{
+                position: absolute;
+                width: 80%;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 40px;
+            }
+           
+        }
+
+        .servies-hero-mobile{
+            filter: brightness(.4);
+            display: block;
+            object-fit: cover;
+        }
+
+        .services-hero-desktop{
+            display: none;
+        }
+    }
+
+    .why-choose-section{
+        .why-choose-section-wrapper{
+            padding: 0px;
+            .why-choose-wype-flex{
+                padding: 30px 0px;
+                flex-direction: column-reverse;
+
+                .why-choose-wype-content{
+                    width: 100%;
+                    text-align: center;
+                    padding: 0px 20px;
+
+                    h2{
+                        font-size: 24px;
+                    }
+
+                    .why-choose-wype-description{
+                        text-align: left;
+                        font-size: 13px;
+                        margin-bottom: 30px;
+                    }
+                }
+                .why-choose-img-wrapper{
+                    width: 100%;
+                }
+            }
+            .why-choose-feature-flex{
+                margin-top: 30px;
+                flex-direction: column;
+                padding-bottom: 30px;
+                row-gap: 30px;
+
+                .why-choose-feature-item{
+
+                    .item-title{
+                        font-size: 15px;
+                    }
+
+                    .item-description{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    .services-list-section{
+        .service-section-wrapper{
+            padding: 30px 20px;
+            .services-section-content-wrapper{
+                .section-title{
+                    font-size: 24px;
+                }
+            }
+            .services-list-flex{
+                .service-item-card{
+                    width: 47%;
+                }
+            }
+        }
     }
 }
