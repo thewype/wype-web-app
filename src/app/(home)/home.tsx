@@ -101,6 +101,21 @@ const HomePage = () => {
         transitionDuration: 500,
     };
 
+    const ourPartnerCarouselOptions = {
+        responsive: {
+            mobile: {
+                breakpoint: { max: 700, min: 0 },
+                items: 1
+            }
+        },
+        ssr: true,
+        infinite: true,
+        autoPlay: true,
+        autoPlaySpeed: 1500,
+        arrows: false,
+        transitionDuration: 500,
+    };
+
     const hanedlePointerMove = (e: any) => {
         const container = imageContainerRef.current;
         if (container) {
@@ -453,6 +468,25 @@ const HomePage = () => {
                         </div>
                         <div className='partners-image-wrapper'>
                             <Image src={arcImage} alt='arc' fill={true} />
+                        </div>
+                    </div>
+                    <div className="our-partners-carousel">
+                        <Carousel {...ourPartnerCarouselOptions}>
+                            <div className='carousel-image-wrapper'>
+                                <Image src={detailingMafiaIMage} alt='detailing mafia'  />
+                            </div>
+                            <div className='carousel-image-wrapper'>
+                                <Image src={mafraImage} alt='MA FRA'  />
+                            </div>
+                            <div className='carousel-image-wrapper'>
+                                <Image src={manaMachineImage} alt='mana machine'  />
+                            </div>
+                            <div className='carousel-image-wrapper'>
+                                <Image src={arcImage} alt='arc' />
+                            </div>
+                        </Carousel>
+                        <div className='our-partner-carousel-btn'>
+                            <WypeButton buttonText='Read More' borderColor='var(--redColor)' backgroundColor='var(--redColor)' color='var(--whiteColor)' fontWeight='600' fontSize='13px' borderRadius='30px' click={() => { }}></WypeButton>
                         </div>
                     </div>
                 </div>
