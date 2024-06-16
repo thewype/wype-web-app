@@ -17,6 +17,10 @@ nav{
             position: relative;
         }
 
+        .menu{
+            display: none;
+        }
+
         .nav-links-list{
             width: 100%;
             padding: 0px 10px;
@@ -24,6 +28,10 @@ nav{
             justify-content: center;
             column-gap: 5%;
             font-size: 15px;
+
+            .menu-close, .login-btn-wrapper{
+                display: none;
+            }
             
             .nav-link{
                 white-space: nowrap;
@@ -39,6 +47,61 @@ nav{
             display: flex;
             font-size: 22px;
             column-gap: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    nav{
+        .navbar-wrapper{
+            padding: 13px 15px;
+
+            .menu{
+                font-size: 22px;
+                display: block;
+            }
+
+            .nav-links-list{
+                transition: .4s;
+                position: fixed;
+                width: 100%;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                row-gap: 30px;
+                top: 0px;
+                left: 0px;
+                padding: 80px 0px 0px 30px;
+                background-color: var(--blackColor);
+
+                .menu-close{
+                    position: absolute;
+                    right: 10%;
+                    top: 5%;
+                    font-size: 22px;
+                    display: block;
+                }
+
+                .nav-link{
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+
+                .login-btn-wrapper{
+                    display: block;
+                    position: absolute;
+                    bottom: 30px;
+                    width: 80%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            .nav-trailing-flex{
+                .user-account{
+                    display: none;
+                }
+            }
         }
     }
 }
